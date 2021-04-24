@@ -1,0 +1,134 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans|Lato:700,900);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// $blue: #00b9f7;
+// blue-munsell: 0196a7
+// green: 00ab66
+// orange: ea8825
+// purple: 8600c8
+// red: f25454
+// slate: 6b798f
+// yellow: e5c41a
+html {
+  --color: #00b9f7;
+  --text: #43484e;
+  --text-rgb: rgb(128, 139, 141);
+  @media (max-width: 862px) {
+    font-size: 93.75%;
+  }
+  @media (max-width: 600px) {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  font-family: "pt sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  text-rendering: optimizelegibility;
+  color: var(--color);
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.section-default {
+  padding: 120px 0;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .separador {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      padding: 10px 5px;
+      border: 1px solid var(--color);
+      position: relative;
+
+      i {
+        color: var(--color);
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        transform: translateX(-120%);
+        width: 8rem;
+        height: 1px;
+        background-color: var(--color);
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        transform: translateX(120%);
+        width: 8rem;
+        height: 1px;
+        background-color: var(--color);
+      }
+    }
+  }
+
+  .subtitle {
+    margin-top: 2rem;
+    text-align: center;
+
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 1.3rem;
+    }
+
+    p {
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}
+
+// MIXINS
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}

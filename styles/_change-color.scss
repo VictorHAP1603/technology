@@ -1,0 +1,94 @@
+.change-color {
+  position: fixed;
+  left: 0px;
+  top: 30%;
+  z-index: 1000;
+  width: 300px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 0 0.5rem 0.5rem 0;
+
+  display: flex;
+  transform: translateX(-70%);
+
+  border: 1px solid #ccc;
+  transition: all 0.4s;
+
+  &.active {
+    transform: translateX(0%);
+  }
+
+  .colors {
+    width: 70%;
+
+    padding: 10px;
+
+    p {
+      margin-bottom: 5px;
+    }
+
+    .list-colors {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+      div {
+        width: 30px;
+        height: 30px;
+        background-color: blue;
+        cursor: pointer;
+
+        &:nth-child(1) {
+          background-color: #00b9f7;
+        }
+        &:nth-child(2) {
+          background-color: #0196a7;
+        }
+        &:nth-child(3) {
+          background-color: #00ab66;
+        }
+        &:nth-child(4) {
+          background-color: #ea8825;
+        }
+        &:nth-child(5) {
+          background-color: #8600c8;
+        }
+        &:nth-child(6) {
+          background-color: #f25454;
+        }
+        &:nth-child(7) {
+          background-color: #6b798f;
+        }
+        &:nth-child(8) {
+          background-color: #e5c41a;
+        }
+      }
+    }
+  }
+
+  .set {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #ccc;
+    cursor: pointer;
+
+    i {
+      animation: animateSpin 2s linear infinite;
+    }
+  }
+}
+
+@keyframes animateSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

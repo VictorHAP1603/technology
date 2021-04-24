@@ -1,0 +1,203 @@
+#countdown-banner {
+  height: auto;
+  width: 100%;
+  background-image: url(../img/slider.jpg);
+  position: relative;
+  padding: 100px 0;
+
+  .background-opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 0;
+  }
+
+  .container {
+    @include flex-center;
+    height: 100%;
+
+    .content {
+      @include flex-center;
+      flex-direction: column;
+      z-index: 1;
+      text-align: center;
+      width: 50%;
+
+      img {
+        margin-bottom: 50px;
+      }
+
+      .title-page {
+        h1 {
+          color: var(--color);
+          font-size: 1.8rem;
+          margin: 0.67rem 0;
+        }
+
+        h2 {
+          margin: 20px 0 10px 0;
+          font-size: 2.6rem;
+          color: #fff;
+        }
+      }
+
+      .countdown {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        margin: 35px 0 65px 0;
+
+        .countdown-item {
+          justify-self: center;
+          width: 120px;
+          height: 120px;
+          border: 2px solid var(--color);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          padding: 15px;
+
+          p {
+            @include flex-center;
+            color: #fff;
+            font-size: 4rem;
+
+            height: 4rem;
+          }
+          span {
+            flex: 1;
+            color: var(--color);
+            font-family: "pt sans", sans-serif;
+          }
+        }
+      }
+
+      .subscribe-text {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 25px;
+      }
+
+      form {
+        input {
+          border: 1px solid var(--color);
+          background-color: transparent;
+          padding: 14px 12px;
+          width: 300px;
+          color: #fff;
+        }
+
+        button {
+          padding: 13px 12px;
+          color: #fff;
+          border: none;
+          font-weight: bold;
+          transform: translateX(-5px);
+          cursor: pointer;
+          position: relative;
+
+          &:hover div {
+            filter: brightness(60%);
+          }
+
+          div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: var(--color);
+            z-index: 0;
+            transition: all 0.4s;
+          }
+
+          p {
+            position: relative;
+            color: #fff;
+            font-size: 16px;
+          }
+        }
+      }
+
+      nav {
+        width: 50%;
+        margin-top: 80px;
+        ul {
+          display: flex;
+          justify-content: space-between;
+
+          li {
+            border: 1px solid var(--color);
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: all 0.4s;
+
+            &:hover {
+              background-color: var(--color);
+
+              i {
+                color: #fff;
+                transition: all 0.4s;
+              }
+            }
+
+            i {
+              color: var(--color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1020px) {
+  #countdown-banner {
+    .container {
+      .content {
+        width: inherit;
+        .countdown {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 50px;
+
+          .countdown-item:nth-child(even) {
+            justify-self: flex-start;
+          }
+          .countdown-item:nth-child(odd) {
+            justify-self: flex-end;
+          }
+        }
+
+        nav {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #countdown-banner {
+    .container {
+      .content {
+        nav {
+          width: 80%;
+        }
+
+        form {
+          input {
+            width: 180px;
+          }
+        }
+      }
+    }
+  }
+}
