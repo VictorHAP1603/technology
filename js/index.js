@@ -45,5 +45,7 @@ function getColor() {
   }
 }
 
+getColor();
+
 buttonOpen.addEventListener("click", open);
 colors.forEach((c) => c.addEventListener("click", changeColor));
