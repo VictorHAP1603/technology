@@ -537,6 +537,7 @@ h6 {
           flex: 1;
   width: auto;
   position: relative;
+  background-color: #fff;
 }
 
 #about .our-team .team_item .img_team_person img {
@@ -664,88 +665,9 @@ h6 {
     width: auto;
     position: relative;
   }
-  #about .our-team .team_item .img_team_person img {
-    border: 3px solid var(--color);
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-  }
   #about .our-team .team_item .img_team_person .social {
-    position: absolute;
     top: 40%;
-    left: 43%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-  }
-  #about .our-team .team_item .img_team_person .social i {
-    color: var(--color);
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  #about .our-team .team_item .img_team_person .social div {
-    position: relative;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-    opacity: 0;
-    background-color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #about .our-team .team_item .img_team_person .social div:hover i {
-    -webkit-filter: brightness(60%);
-            filter: brightness(60%);
-  }
-  #about .our-team .team_item .img_team_person .social div:nth-child(1) {
-    -webkit-transform: translateY(-140%);
-            transform: translateY(-140%);
-  }
-  #about .our-team .team_item .img_team_person .social div:nth-child(2) {
-    -webkit-transform: translateX(140%);
-            transform: translateX(140%);
-  }
-  #about .our-team .team_item .img_team_person .social div:nth-child(3) {
-    -webkit-transform: translateX(-140%);
-            transform: translateX(-140%);
-  }
-  #about .our-team .team_item .img_team_person .social div:nth-child(4) {
-    -webkit-transform: translateY(140%);
-            transform: translateY(140%);
-  }
-  #about .our-team .team_item .img_team_person:hover img {
-    -webkit-filter: brightness(30%);
-            filter: brightness(30%);
-  }
-  #about .our-team .team_item .img_team_person:hover .social div {
-    -webkit-transform: translateX(0%) translateY(0%);
-            transform: translateX(0%) translateY(0%);
-    opacity: 1;
-    cursor: pointer;
-  }
-  #about .our-team .team_item .description_item_person {
-    margin-top: 1rem;
-  }
-  #about .our-team .team_item .description_item_person .name {
-    font-size: 1.5rem;
-    color: #fff;
-    font-weight: bold;
-  }
-  #about .our-team .team_item .description_item_person .ocupation {
-    margin-top: 6px;
-    font-size: 1rem;
-    color: var(--color);
+    left: 47%;
   }
 }
 

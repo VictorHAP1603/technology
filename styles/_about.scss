@@ -42,6 +42,7 @@
         width: auto;
 
         position: relative;
+        background-color: #fff;
 
         img {
           border: 3px solid var(--color);
@@ -157,89 +158,9 @@
 
           position: relative;
 
-          img {
-            border: 3px solid var(--color);
-            transition: all 0.4s;
-          }
-
           .social {
-            position: absolute;
             top: 40%;
-            left: 43%;
-
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            transition: all 0.4s;
-
-            i {
-              color: var(--color);
-              transition: all 0.4s;
-              transform: scale(1.2);
-            }
-
-            div {
-              position: relative;
-              transition: all 0.4s;
-              opacity: 0;
-              background-color: #fff;
-
-              display: flex;
-              justify-content: center;
-              align-items: center;
-
-              &:hover {
-                i {
-                  filter: brightness(60%);
-                }
-              }
-            }
-
-            div:nth-child(1) {
-              transform: translateY(-140%);
-            }
-
-            div:nth-child(2) {
-              transform: translateX(140%);
-            }
-
-            div:nth-child(3) {
-              transform: translateX(-140%);
-            }
-
-            div:nth-child(4) {
-              transform: translateY(140%);
-            }
-          }
-
-          &:hover {
-            img {
-              filter: brightness(30%);
-            }
-
-            .social {
-              div {
-                transform: translateX(0%) translateY(0%);
-                opacity: 1;
-                cursor: pointer;
-              }
-            }
-          }
-        }
-
-        .description_item_person {
-          margin-top: 1rem;
-
-          .name {
-            font-size: 1.5rem;
-            color: #fff;
-            font-weight: bold;
-          }
-
-          .ocupation {
-            margin-top: 6px;
-            font-size: 1rem;
-            color: var(--color);
+            left: 47%;
           }
         }
       }
